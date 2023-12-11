@@ -2,8 +2,8 @@
 
 
 <br>
-<h2> Дипломски испит -- Bachelor Thesis 
-    Алекса Шкрбић IN 29/2018 </h2>
+<h2> Дипломски испит -- Bachelor Thesis </h2>
+   <h2> Алекса Шкрбић IN 29/2018  </h2> 
 
 
 <h2>Technologies:</h2>
