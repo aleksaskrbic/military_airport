@@ -4,7 +4,7 @@
 <br>
 <h2> Дипломски испит (Bachelor Thesis) 
    <ul>
-      <li> </li>
+      <h2></h2>
    <li> Алекса Шкрбић IN 29/2018  </li>
    <li> Информациони Инжењеринг (Information Engeneering)  </li> 
       
