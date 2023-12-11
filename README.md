@@ -11,7 +11,7 @@
    </ul>
    </h2> 
 
-<h2>Technologies:</h2>
+<h2>Технологије (Technologies):</h2>
 <ul>
   <li>Back: Java Spring Boot</li>
   <li>Front: Angular</li>
@@ -22,7 +22,7 @@
 
 
 
-<h2>Need to install:</h2>
+<h2>Неопходно Инсталирати (Need to install):</h2>
 <ul>
   <li>Angular Material:<br>
     <code>ng add @angular/material</code>
@@ -35,7 +35,7 @@ npm config set legacy-peer-deps true</code>
 </ul>
 
 
-<h2>How to run:</h2>
+<h2>Како покренути (How to run):</h2>
 <ul>
   <li>Back: run as Maven project
   </li>
