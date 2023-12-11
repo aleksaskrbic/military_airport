@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>FORMA ZA REGISTRACIJU</title>
+    <meta name = "viewport" content="width=device-width,
+    inital-scale=1.0"/>
+</head>
+
+
+
+    <head>
+        <meta charset="UTF-8">
+       <title> Day Night Toggle | CodingLab </title>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       </head>
+
+<body>
+
+    <h1 class="text-center" style="color:white;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1cm; font-weight: bold;">
+        Регистрација Новог Пилота</h1>
+
+    <div class="container">
+        <input type="checkbox" id="switch">
+       <div class="outer">
+
+        <div >
+          <img class = "image-box3" alt="grb"  src="./assets/img/srpski_tocak.png" height=30% > 
+     </div> 
+    
+     <div >
+      <img class = "image-box2" alt="grb"  src="./assets/img/srpski_grb.png" height=30% > 
+    </div>
+         
+         <div class="content">
+
+          <!--<h2 class="podnaslov" style="color:#092c3e; font-weight: bold;">КонтролорЛета: {{flyController.firstName + " " + flyController.lastName}}</h2>-->
+          <button class="bek_dugme" (click)="Back()">Назад</button>
+
+           <label for="switch">
+             <span class="toggle">
+               <span class="circle"></span>
+             </span>
+           </label>
+           <div class="image-box">
+            <img src="./assets/img/pilot.jpg" alt="">
+           </div>
+
+           
+           <div class="details">
+             
+             <div class="buttons">
+                <button (click)="RegisterPilot()">Потврди Промене</button>
+
+             </div>
+           </div>
+
+           <div class="details">
+              <P>  </P>
+              <P>  </P>
+              <P>  </P>
+             <div class="job">Име:   <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPilot.firstName"></div>
+             <div class="job">Презиме:  <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPilot.lastName"> </div>
+             <div class="job">Корисничко Име: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPilot.username"></div>
+             <div class="job">Лозинка: <input  type="password" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPilot.password"></div>
+             <div class="job">Мејл Адреса: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPilot.email"></div>
+             <div class="job">Град: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPilot.city"></div>
+             <div class="job">Адреса: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPilot.adress"></div>
+             <div class="job">Чин: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPilot.cin"></div>
+             <div class="job">Поени: <input  type="number" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPilot.points"></div>
+
+             <!--<input id="firstName"  name="firstName" type="text"  class="form-control" required [placeholder]="placeholder"  [(ngModel)]="pilot.firstName" />-->
+     
+             
+           </div>
+           
+         </div>
+     
+         </div>
+      </div>
+ 
+         
+        
+
+</body>
+
+</html>

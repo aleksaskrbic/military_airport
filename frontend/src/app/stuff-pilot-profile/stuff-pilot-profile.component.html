@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+    <body>
+<h1 class="text-center" style="color:white;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1cm; font-weight: bold;">
+  Профил Пилота</h1>
+
+  
+
+  <head>
+    <meta charset="UTF-8">
+   <title> Day Night Toggle | CodingLab </title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+ <div class="container">
+   <input type="checkbox" id="switch">
+  <div class="outer">
+
+    <div >
+      <img class = "image-box3" alt="grb"  src="./assets/img/srpski_tocak.png" height=30% > 
+ </div> 
+
+ <div >
+  <img class = "image-box2" alt="grb"  src="./assets/img/srpski_grb.png" height=30% > 
+</div>
+    
+    <div class="content">
+      <label for="switch">
+        <span class="toggle">
+          <span class="circle"></span>
+        </span>
+      </label>
+
+      <button class="bek_dugme" (click)="Back()">Назад</button>
+
+      <div class="image-box">
+       <img src="./assets/img/pilot.jpg" alt="">
+      </div>
+
+
+      
+      <div class="details">
+        <div class="name" p> {{pilot.firstName + " " + pilot.lastName}}<p></div>
+        <div class="job" p> {{pilot.cin}}<p></p></div>
+        <div class="buttons">
+
+          <div *ngIf="(pilot.id == 10)">          <p>Рођен је 05.10.1959. Командант 204. ловачко-авијацијског пука. Летео је на ловачком авиону МиГ-29.Војну Гимназију завршио је у Мостару. 04.05.1999. упутио се у борбу са 16 авиона НАТО пакта, типа Ф-16 фалкон.</p></div>
+          <div *ngIf="(pilot.id == 12)">          <p>Рођен је 26.02.1965. у Приштини. Школовао се у Ваздухопловној-војној школи у Мостару. </p></div>
+
+
+        </div>
+      </div>
+     
+     
+
+      <div class="details">
+         <P>  </P>
+         <P>  </P>
+         <P>  </P>
+        <div class="job">Мејл Адреса:   <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="pilot.email"></div>
+        <div class="job">Корисничко Име:  <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="pilot.username"> </div>
+        <div class="job">Адреса: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="pilot.adress"></div>
+        <div class="job">Град: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="pilot.city"></div>
+        <div class="job">Држава: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="pilot.state"></div>
+        <div class="job">Мобилни Телефон: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="pilot.mobile"></div>
+
+        <div class="job">Бодови: {{pilot.points}}</div>
+        <!--<input id="firstName"  name="firstName" type="text"  class="form-control" required [placeholder]="placeholder"  [(ngModel)]="pilot.firstName" />-->
+      </div>
+    </div>
+
+  <div class = "okvir">
+    <h2 class="podnaslov" style="color:white;    font-weight: bold;"> Будући Термини</h2>
+
+   
+
+  
+
+    <div class="table">
+      <table    datatable class="table  " style="background-color:white;color:darkslategray; font-weight: bold; ">
+          <thead>
+              <tr>
+                  <th scope="col" fontweight = "bold">Редни Број </th>
+                   <th scope="col" fontweight = "bold">Почетак </th>
+                  <th scope="col" fontweight = "bold">Крај </th>
+                  <th scope="col" fontweight = "bold">Трајање</th>
+                  <!--<th scope="col" fontweight = "bold">Слободан Лет</th>-->
+                  <th scope="col" fontweight = "bold">Завршен Лет</th>
+
+                  <th scope="col" fontweight = "bold">Пилот Дошао </th>
+                  <th scope="col" fontweight = "bold">Авион </th>
+                  <th scope="col" fontweight = "bold">Писта</th>
+                  <th scope="col" fontweight = "bold">Додај Пенал </th>
+                  <th scope="col" fontweight = "bold">Промени Статус</th>
+                  <th scope="col" fontweight = "bold">Погледај Термин</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let flyTerm of flyTerms">
+                  <td> <img alt="icon" src="./assets/img/air-force.png" class="id">{{flyTerm.id}}</td>
+                  <td class = "start">{{flyTerm.start}}</td>
+                  <td class = "end">{{flyTerm.end}}</td>
+                  <td class = "duration">{{flyTerm.duration + "минута"}}</td>
+                  <!--<td> <div *ngIf="(flyTerm.freeTerm == true)"><img alt="icon" src="./assets/img/approve.png" class="id"></div>
+                       <div *ngIf="(flyTerm.freeTerm == false)"> <img alt="icon" src="./assets/img/waiting.png" class="id"></div> </td>-->
+                  
+                       <td> <div *ngIf="(flyTerm.completedTerm == true)"><img alt="icon" src="./assets/img/approve.png" class="id"></div>
+                        <div *ngIf="(flyTerm.completedTerm == false)"> <img alt="icon" src="./assets/img/waiting.png" class="id"></div> </td>
+                    
+
+                  <td> <div *ngIf="(flyTerm.pilotCome == true)"><img alt="icon" src="./assets/img/approve.png" class="id"></div>
+                    <div *ngIf="(flyTerm.pilotCome == false)"> <img alt="icon" src="./assets/img/waiting.png" class="id"></div> </td>
+
+                   
+                    <td class = "airplane_name">{{flyTerm.airplane.airplane_name}}</td>
+                  <td class = "railWay_id">{{flyTerm.railWay.id}}</td>
+                  <td><button class = "dugmence" (click)="addNegativePoint(flyTerm)"   >Додели Пенал</button></td>
+                  <td><button class = "dugmence"  (click)="UpdateFlyTerm(flyTerm)"  >Промени Статус</button></td>
+                  <td><button class = "dugmence" (click)="ShowTerm(flyTerm.id)" >Погледај Термин</button></td>
+
+  
+          </tr>
+          </tbody>
+      </table>
+   </div>
+      </div>
+    </div>
+ </div>
+
+
+
+ </body>
+</html>

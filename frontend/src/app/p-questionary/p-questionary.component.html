@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>FORMA ZA REGISTRACIJU</title>
+    <meta name = "viewport" content="width=device-width,
+    inital-scale=1.0"/>
+</head>
+
+
+
+   <body>
+
+    <h1 class="text-center" style="color:white;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1cm; font-weight: bold;">
+        Упитник о Способности Пилота за Лет</h1>
+
+        <div class="container">
+       <div class="outer">
+         <div class="content">
+          <form >  
+                <label for="firstName" class="podnaslov1">Подаци о Пилоту</label>
+                <div >
+                    <img class = "image-box2" alt="grb"  src="./assets/img/srpski_tocak.png" height=70% > 
+                  </div>
+                <div class="okvir2">
+                    <div class="details">
+                        <div class="job">ИД Пилота:  {{pilot.id}} </div>
+                        <p>-----------------</p>
+                        <div class="job">Име:  {{pilot.firstName}} </div>
+                        <p>-----------------</p>
+                        <div class="job">Презиме:  {{pilot.lastName}}</div>
+                        <p>-----------------</p>
+                        <div class="job">Мејл Адреса: {{pilot.email}}</div>
+                        <p>-----------------</p>
+                        <div class="job">Мобилни Телефон: {{pilot.mobile}}</div>
+                    </div>
+                  
+                    <div class = "details2">
+                      <div class="job">Чин:   {{pilot.cin}}</div>
+                      <p>-------------------</p>
+                      <div class="job">Поени: {{pilot.points}}</div>
+                      <p>-------------------</p>
+                      <div class="job">Град: {{pilot.city}}</div>
+                      <p>-------------------</p>
+                      <div class="job">Држава: {{pilot.state}}</div>
+                      <p>-------------------</p>
+                      <div class="job">Адреса:  {{pilot.adress}}</div>
+                     </div>
+                   </div>
+                 
+              </form>
+
+              <label for="firstName" class="podnaslov2">ПопуњаваПилот</label>
+  
+    <div class="pitanja">
+    <div class="row1">
+    <div *ngIf="mustfill"><p style="text-align:center"><label><font size="5" style="color:brown;">Ово питање је обавезно!</font></label></p> </div>
+    <div class="col-sm">
+        <p> Да ли је од претходног лета прошло барем 7 дана?</p>
+    </div>
+    <div class="col-sm">
+        <mat-radio-group aria-label="Select an option" style="margin-right: 450px;" [(ngModel)]="pickpilotSurvey.p1">
+            <mat-radio-button value="YES">ДА</mat-radio-button>
+            <mat-radio-button value="NO">НЕ</mat-radio-button>
+          </mat-radio-group>
+    </div>
+  </div>
+
+
+  <div class="row2">
+    <div *ngIf="mustfill"><p style="text-align:center"><label><font size="5" style="color:brown;">Ово питање је обавезно!</font></label></p> </div>
+    <div class="col-sm">
+        <p> Да ли су у одсуству симптоми прехладе, грипа или опште слабости?</p>
+    </div>
+    <div class="col-sm">
+        <mat-radio-group aria-label="Select an option" style="margin-right: 450px;" [(ngModel)]="pickpilotSurvey.p2">
+            <mat-radio-button value="YES">ДА</mat-radio-button>
+            <mat-radio-button value="NO">НЕ</mat-radio-button>
+          </mat-radio-group>
+    </div>
+  </div>
+
+  <div class="row3">
+    <div *ngIf="mustfill"><p style="text-align:center"><label><font size="5" style="color:brown;">Ово питање је обавезно!</font></label></p> </div>
+    <div class="col-sm">
+        <p> Да ли су обављени сви претходни медицински тестови?</p>
+    </div>
+    <div class="col-sm">
+        <mat-radio-group aria-label="Select an option" style="margin-right: 450px;" [(ngModel)]="pickpilotSurvey.p3">
+            <mat-radio-button value="YES">ДА</mat-radio-button>
+            <mat-radio-button value="NO">НЕ</mat-radio-button>
+          </mat-radio-group>
+    </div>
+  </div>
+
+  <div class="row4">
+    <div *ngIf="mustfill"><p style="text-align:center"><label><font size="5" style="color:brown;">Ово питање је обавезно!</font></label></p> </div>
+    <div class="col-sm">
+        <p> Да ли је крвни притисак у референтним вредностима?</p>
+    </div>
+    <div class="col-sm">
+        <mat-radio-group aria-label="Select an option" style="margin-right: 450px;" [(ngModel)]="pickpilotSurvey.p4">
+            <mat-radio-button value="YES">ДА</mat-radio-button>
+            <mat-radio-button value="NO">НЕ</mat-radio-button>
+          </mat-radio-group>
+    </div>
+  </div>
+
+  <div class="row5">
+    <div *ngIf="mustfill"><p style="text-align:center"><label><font size="5" style="color:brown;">Ово питање је обавезно!</font></label></p> </div>
+    <div class="col-sm">
+        <p> Да ли је извршена провера личне опреме и наоружања?</p>
+    </div>
+    <div class="col-sm">
+        <mat-radio-group aria-label="Select an option" style="margin-right: 450px;" [(ngModel)]="pickpilotSurvey.p5">
+            <mat-radio-button value="YES">ДА</mat-radio-button>
+            <mat-radio-button value="NO">НЕ</mat-radio-button>
+          </mat-radio-group>
+    </div>
+  </div>
+
+
+  <div class="row6">
+    <div *ngIf="mustfill"><p style="text-align:center"><label><font size="5" style="color:brown;">Ово питање је обавезно!</font></label></p> </div>
+    <div class="col-sm">
+        <p> Да ли су обављене тренажне припреме за лет?</p>
+    </div>
+    <div class="col-sm">
+        <mat-radio-group aria-label="Select an option" style="margin-right: 450px;" [(ngModel)]="pickpilotSurvey.p6">
+            <mat-radio-button value="YES">ДА</mat-radio-button>
+            <mat-radio-button value="NO">НЕ</mat-radio-button>
+          </mat-radio-group>
+    </div>
+  </div>
+
+</div>
+
+
+  <button class="dugme" (click)="Save()">Сачувај</button>
+  <button class="dugme" (click)="ScheduleTerm()">Потврди</button>
+
+
+
+
+</div>
+     
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+  </body>
+</html>

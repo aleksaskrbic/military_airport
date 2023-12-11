@@ -1,0 +1,51 @@
+<body>
+<section class="text-center" style="background-color:ghostwhite"> </section> 
+    <div class="text-center" style="background-color:ghostwhite"> </div>
+    <h1 class="text-center" style="color:white;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1cm; font-weight: bold;">
+        Листа свих доступних Пилота</h1>
+        <h2 class="text-center" style="color:whitesmoke; background-color:#092c3e; font-weight: bold;">Увид у све доступне пилоте</h2>
+
+       
+        <button class="bek_dugme" (click)="Back()">Назад</button>
+
+
+<div class="card-body py-5 px-md-5">
+
+<div class="table">
+    <table    datatable class="table  " style="background-color:white;color:darkslategray; font-weight: bold; ">
+        <thead>
+            <tr>
+                <th scope="col" fontweight = "bold">Редни Број </th>
+                <th scope="col" fontweight = "bold">Име</th>
+                <th scope="col" fontweight = "bold">Презиме</th>
+                <th scope="col" fontweight = "bold">Чин</th>
+                <th scope="col" fontweight = "bold">Мејл адреса</th>
+                <th scope="col" fontweight = "bold">Аеродром</th>
+                <th scope="col" fontweight = "bold">Поени</th>
+                <th scope="col" fontweight = "bold">Погледај</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pilot of pilots">
+                <td><img alt="icon" src="./assets/img/air-force.png" class="id">{{pilot.id}}</td>
+                <td class="registrationMark">{{pilot.firstName}}</td>
+                <td class="airplane_name">{{pilot.lastName}}</td>
+                <td class="airplaneType">{{pilot.cin}}</td>
+                <td class="seat_number">{{pilot.email}}</td>
+                <td class="airport_name">{{pilot.airport.airport_name}}</td>
+                <td class="airport_name">{{pilot.points}}</td>
+                <td><button class="dugme"><img src = "./assets/img/pilot.png"   (click)="PilotProfile(pilot.id)"></button></td>
+
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>
+</div>
+</body>
+   
+
+
+
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+
+<body>
+<h1 class="text-center" style="color:white;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1cm; font-weight: bold;">
+  Профил Војног Авиона</h1>
+
+  
+
+
+
+ <div class="container">
+   <input type="checkbox" id="switch">
+
+    
+    
+    <div class="content">
+      <label for="switch">
+        <span class="toggle">
+          <span class="circle"></span>
+        </span>
+      </label>
+      <div class="image-box">
+       <img src="./assets/img/avio-pejzaz.jpg" alt="">
+      </div>
+
+
+      
+      <div class="naslov">
+        <div class="name" p> {{flyTerm.airplane.airplane_name}}<p></div>
+          <!--<p>Lorem dolor sit amet, consectetur adipisicing elit. Ab officiis, harum minus aliquam atque aliquid enim commodi accusantium ut maiores dolorum nulla?</p>-->
+          <button class="bek_dugme" (click)="Back()">Назад</button>
+
+        <div class="buttons">
+          <button (click)="viewMechanicSurvey(flyTerm.id)" >Контролни Преглед</button>
+        </div>
+
+      </div>
+     
+
+      <div class="details">
+         <P>  </P>
+         <P>  </P>
+         <P>  </P>
+        <div class="job">ИД Број:   <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="flyTerm.airplane.id"></div>
+        <p></p>
+        <div class="job">Регистарска Ознака:  <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="flyTerm.airplane.registrationMark"> </div>
+        <p></p>
+        <div class="job">Тип Авиона: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="flyTerm.airplane.airplaneType"></div>
+        <p></p>
+        <div class="job">Број Седишта: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="flyTerm.airplane.seat_number"></div>
+        <p></p>
+        <div class="job">Аеродром: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="flyTerm.airplane.airport.airport_name"></div>
+        <p></p>
+        <div class="job">Способан: <div *ngIf="(flyTerm.airplane.enabled == true)">  <img alt="icon" src="./assets/img/approve.png"  class="job">    </div>
+        <div *ngIf="(flyTerm.airplane.enabled == false)">  <img alt="icon" src="./assets/img/waiting.png"  class="job">    </div>      </div>
+       
+      </div>
+      <!--<div class = "details2">
+
+        <div class="job">Максимална Висина: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="airplane.maximum_high"></div>
+        <div class="job">Распон Крила: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="airplane.length_wings"></div>
+        <div class="job">Погон: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="airplane.pogon"></div>
+        <div class="job">Тактични Радиус: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="airplane.tactical_radius"></div>
+        <div class="job">Способан За Лет: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="airplane.enabled"></div>
+
+
+      </div>-->
+
+      
+
+    </div>
+    <h2 class="podnaslov" style="color:white;    font-weight: bold;"> Техничке Карактеристике и Систем Наоружања</h2>
+
+  <div class = "content2">
+      <label for="switch">
+        <span class="toggle">
+          <span class="circle"></span>
+        </span>
+      </label>
+      
+      
+      <div class="naslov">
+        <div class="name" p> {{flyTerm.airplane.airplane_name}}<p></div>
+          <!--<p>Lorem dolor sit amet, consectetur adipisicing elit. Ab officiis, harum minus aliquam atque aliquid enim commodi accusantium ut maiores dolorum nulla?</p>-->
+
+        <!--<div class="buttons">
+          <button >Промени Податке</button>
+          <button >Будући Термини</button>
+        </div>-->
+
+      </div>
+
+      
+     
+
+      <div class="details">
+         <P>  </P>
+         <P>  </P>
+         <P>  </P>
+        <div class="job">Максимална брзина[km/h]:   <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="flyTerm.airplane.maximum_speed"></div>
+        <div class="job">Максимална Висина[km]: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="flyTerm.airplane.maximum_high"></div>
+        <div class="job">Распон Крила[m]:  <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="flyTerm.airplane.length_wings"> </div>
+        <div class="job">Тактички Радиус[km]: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="flyTerm.airplane.tactical_radius"></div>
+       
+      </div>
+      <div class = "details2">
+
+        <div class="job">Погон: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="flyTerm.airplane.registrationMark"></div>
+        <div class="job">Ракетни Радиус[km]: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="flyTerm.airplane.rocket_radius"></div>
+        <div class="job">Тип Ракете: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="flyTerm.airplane.weaponSystem.rocket_type"></div>
+        <div class="job">Број Ракета: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="flyTerm.airplane.weaponSystem.number_of_rockets"></div>
+        <div class="job">Количина Горива[l]: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="flyTerm.airplane.fuel_reserve"></div>
+
+
+      </div>
+
+    </div>
+
+      </div>
+ 
+
+
+
+ </body>
+</html>

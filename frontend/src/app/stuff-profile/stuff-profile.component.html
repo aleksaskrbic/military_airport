@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+
+<body>
+<h1 class="text-center" style="color:white;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1cm; font-weight: bold;">
+  Профил Контролора Летења</h1>
+
+  
+
+
+
+ <div class="container">
+  <div class="outer">
+
+    <!--<div >
+      <img class = "image-box3" alt="grb"  src="./assets/img/srpski_tocak.png" height=30% > 
+ </div> 
+
+ <div >
+  <img class = "image-box2" alt="grb"  src="./assets/img/srpski_grb.png" height=30% > 
+</div>-->
+
+<div class = "slike">
+<div >
+  <img class = "izvestaj" (click)="AllReports()"  src="./assets/img/folder.png" height=30% > 
+</div>
+<label class="izvestajl">Сви Извештаји</label>
+
+<div >
+  <img class = "kalendar" (click)="FlyCalendar()"   src="./assets/img/google-calendar.png" height=30% > 
+  <label class="kalendarl">Календар Летова</label>
+
+</div>
+
+<div >
+  <img class = "termin" (click)="NewFly()"   src="./assets/img/calendar.png" height=30% > 
+  <label class="noviterminl">Нови Лет</label>
+
+</div>
+
+<div >
+  <img class = "piloti" (click)="AllPilots()"   src="./assets/img/pilot1.png" height=30% > 
+  <label class="pilotil">Пилоти</label>
+
+</div>
+
+<div >
+  <img class = "contact" (click)="NewPilot()"   src="./assets/img/contact.png" height=30% > 
+  <label class="novipilotl">Додај Пилота</label>
+
+</div>
+
+<div >
+  <img class = "new_plane" (click)="NewPlane()"  src="./assets/img/send.png" height=30% > 
+  <label class="new_planel">Додај Авион</label>
+
+</div>
+
+</div>
+
+
+<h2 class="podnaslov" style="color:white;   font-weight: bold;">
+  Следећи лет</h2>
+    
+    <div class="content">
+      
+      <div class="image-box">
+       <img src="./assets/img/pilot.jpg" alt="">
+      </div>
+
+     
+      
+      <div class="details">
+        <div class="name" p> {{flyController.firstName + " " + flyController.lastName}}<p></div>
+        <div class="job" p> Контролор Лета<p></p></div>
+        <div class="buttons">
+          <!--<button (click)="UpdatePilot()">Промени Податке</button>
+          <button (click)="ReserveTerm()">Резервиши Термин</button>
+          <button (click)="viewFutureTerms()">Будући Термини</button>-->
+        </div>
+      </div>
+     
+
+      <div class="details">
+         <P>  </P>
+         <P>  </P>
+         <P>  </P>
+        <div class="job">Мејл Адреса:   <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="flyController.email"></div>
+        <div class="job">Корисничко Име:  <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="flyController.username"> </div>
+        <div class="job">Лозинка: <input  type="password" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="flyController.password"></div>
+ 
+      </div>
+    </div>
+
+
+
+    <div class="table">
+        <table    datatable class="table  " style="background-color:white;color:darkslategray; font-weight: bold; ">
+            <thead>
+                <tr>
+                    <th scope="col" fontweight = "bold">Редни Број </th>
+                     <th scope="col" fontweight = "bold">Почетак </th>
+                    <th scope="col" fontweight = "bold">Крај </th>
+                    <th scope="col" fontweight = "bold">Трајање</th>
+  
+                    <th scope="col" fontweight = "bold">Авион </th>
+                    <th scope="col" fontweight = "bold">Авион Исправан</th>
+
+                    <th scope="col" fontweight = "bold">Пилот Дошао </th>
+                    <th scope="col" fontweight = "bold">Слободан Термин </th>
+                    <th scope="col" fontweight = "bold">Пилот </th>
+
+
+                    <th scope="col" fontweight = "bold">Писта</th>
+                    <th scope="col" fontweight = "bold">Профил Пилота</th>
+                    <th scope="col" fontweight = "bold">Профил Авиона</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr>
+                    <td class = "id">{{flyTerm.id}}</td>
+                    <td class = "start">{{flyTerm.start}}</td>
+                    <td class = "end">{{flyTerm.end}}</td>
+                    <td class = "duration">{{flyTerm.duration}}</td>
+                    <td class = "airplane_name">{{flyTerm.airplane.airplane_name}}</td>
+                    <td> <div *ngIf="(flyTerm.airplane.enabled == true)"><img alt="icon" src="./assets/img/approve.png" class="id"></div>
+                      <div *ngIf="(flyTerm.airplane.enabled== false)"> <img alt="icon" src="./assets/img/waiting.png" class="id"></div> </td>
+                 
+                 <td> <div *ngIf="(flyTerm.pilotCome == true)"><img alt="icon" src="./assets/img/approve.png" class="id"></div>
+                   <div *ngIf="(flyTerm.pilotCome == false)"> <img alt="icon" src="./assets/img/waiting.png" class="id"></div> </td>
+
+                    <td> <div *ngIf="(flyTerm.freeTerm == true)"><img alt="icon" src="./assets/img/approve.png" class="id"></div>
+                      <div *ngIf="(flyTerm.freeTerm == false)"> <img alt="icon" src="./assets/img/waiting.png" class="id"></div> </td>
+                 
+                 
+                    <td class = "airplane_name">{{flyTerm.pilot.cin + " " + flyTerm.pilot.firstName + " " + flyTerm.pilot.lastName}}</td>
+
+                    <td class = "railWay_id">{{flyTerm.railWay.id}}</td>
+                 
+                    <td><button class = "dugmence"><img src = "./assets/img/pilot.png"   (click)="PilotProfile(flyTerm.pilot.id)"></button></td>
+                    <td><button class = "dugmence"><img src = "./assets/img/air-force.png"   (click)="PlaneProfile(flyTerm.id)"></button></td>
+  
+    
+            </tr>
+            </tbody>
+        </table>
+     </div>
+
+     
+
+  
+    </div>
+ </div>
+
+
+
+ </body>
+</html>

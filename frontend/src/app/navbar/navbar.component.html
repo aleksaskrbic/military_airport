@@ -1,0 +1,19 @@
+<mat-toolbar style="background-color: #154360" color="primary" class="mat-elevation-z6">
+    <span><mat-icon>rocket</mat-icon>Ратно Ваздухопловство</span>
+    
+    
+       
+
+    <div class = "spacer"></div>
+
+    <div *ngIf="!loginService.isUserLoggedIn(); else activeUser">
+         
+        <!--<a class="log_dugme"  mat-raised-button color="accent" routerLink="login">Пријави Се</a>-->
+    </div>
+
+    <ng-template #activeUser>
+    <app-navbar-home ></app-navbar-home>
+    </ng-template>
+
+    
+   </mat-toolbar>

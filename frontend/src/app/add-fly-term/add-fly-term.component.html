@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>FORMA ZA REGISTRACIJU</title>
+    <meta name = "viewport" content="width=device-width,
+    inital-scale=1.0"/>
+</head>
+
+
+
+    <head>
+        <meta charset="UTF-8">
+       <title> Day Night Toggle | CodingLab </title>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       </head>
+
+<body>
+
+    <h1 class="text-center" style="color:white;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1cm; font-weight: bold;">
+        Креирање Термина За Летење</h1>
+
+    <div class="container">
+        <input type="checkbox" id="switch">
+       <div class="outer">
+         
+         <div class="content">
+           <label for="switch">
+             <span class="toggle">
+               <span class="circle"></span>
+             </span>
+           </label>
+           
+
+           <div class="image-box2">
+            <img src="./assets/img/srpski_tocak.png" alt="">
+           </div>
+           
+           <div class="details">
+             
+             <div class="buttons">
+                <button (click)="addFastFlyTerm()">Потврди Промене</button>
+
+             </div>
+           </div>
+           <h2 class="podnaslov" style="color:#092c3e; font-weight: bold;">КонтролорЛета: {{flyControler.firstName + " " + flyControler.lastName}}</h2>
+           <!--<div class="job">Контролор: {{flyControler.firstName + " " + flyControler.lastName}} </div>-->
+           <button class="bek_dugme" (click)="Back()">Назад</button>
+
+
+
+           <div class="details">
+              <P>  </P>
+              <P>  </P>
+              <P>  </P>
+             <div class="job">Почетак:  <input  type="datetime-local" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newFastTerm.start" required start="start" #start="ngModel"> 
+                <div [hidden]="start.valid || start.pristine"
+                class="alert alert-danger">
+                Почетак Термина је обавезан!
+              </div>
+            </div>
+            <p></p>
+            
+
+             <div class="job">Крај: <input  type="datetime-local" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newFastTerm.end" required end="end" #end="ngModel">
+                <div [hidden]="end.valid || end.pristine"
+                class="alert alert-danger">
+                Завршетак Термина је обавезан!
+              </div>
+            </div>
+            <p></p>
+
+             <div class="job">Трајање[минутa]: <input  type="number" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newFastTerm.duration"></div>
+             <p></p>
+             <div class="job">Избор Авиона[ИД Број]: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="pickAirplane.id">
+              <!--<igx-combo #combo class="combo" [itemsMaxHeight]="5"
+              [data]="airplanes" [displayKey]="'airplane.id'" [valueKey]="'airplane.id'"
+              placeholder="Location(s)"  searchPlaceholder="Search..." >  
+          </igx-combo>-->
+            </div>
+             <p></p>
+             <div class="job">Избор Писте[ИД Број]: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="pickRailway.id"></div>
+           
+             
+     
+             
+           </div>
+           
+         </div>
+     
+         </div>
+      </div>
+ 
+         
+        
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+/*#background{
+
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../assets/img/flota.png) ;
+    background-size: cover ;
+}*/
+
+.center {
+    display: block;
+    margin-left: left;
+    margin-right: left;
+    margin-top: left;
+    width: 7%;
+  }
+  
+

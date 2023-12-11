@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+
+<body>
+<h1 class="text-center" style="color:white;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1cm; font-weight: bold;">
+  Регистрација Војног Авиона</h1>
+
+  
+
+
+
+ <div class="container">
+   <input type="checkbox" id="switch">
+
+    
+    
+    <div class="content">
+     
+     <div class="image-box">
+       <img src="./assets/img/avio-pejzaz.jpg" alt="">
+      </div>
+
+     
+      
+      <div class="naslov">
+        <div class="name" p> Нови Авион<p></div>
+          <!--<p>Lorem dolor sit amet, consectetur adipisicing elit. Ab officiis, harum minus aliquam atque aliquid enim commodi accusantium ut maiores dolorum nulla?</p>-->
+          <button class="bek_dugme" (click)="Back()">Назад</button>
+
+        
+
+      </div>
+
+
+     
+
+      <div class="details">
+         <P>  </P>
+         <P>  </P>
+         <P>  </P>
+         <div class="job">Регистарска Ознака:  <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPlane.registrationMark"> </div>
+        <p></p>
+        <div class="job">Назив Авиона:  <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPlane.airplane_name"> </div>
+        <p></p>
+        <div class="job">
+            <span class = "type-title">Тип Авиона</span>
+              <div class="type-category">
+                <mat-radio-group aria-label="Select an option" style="margin-right: 450px;" name="sex" [(ngModel)]="newPlane.airplaneType">
+                    <mat-radio-button value="Ловац">Ловац</mat-radio-button>
+                    <mat-radio-button value="Ловац-Бомбардер">Ловац-Бомбардер</mat-radio-button>
+                    <mat-radio-button value="Бомбардер">Бомбардер</mat-radio-button>
+                  </mat-radio-group>
+            </div>
+          </div>
+        <!--<div class="job">Тип Авиона: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPlane.airplaneType"></div>-->
+        <p></p>
+        <div class="job">Број Седишта: <input  type="number" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPlane.seat_number"></div>
+        <p></p>
+        <div class="job">
+            <span class = "type-title">У Возном Стању</span>
+              <div class="type-category">
+                <mat-radio-group aria-label="Select an option" style="margin-right: 450px;" name="sex" [(ngModel)]="newPlane.enabled">
+                    <mat-radio-button value="True">Исправан</mat-radio-button>
+                    <mat-radio-button value="False">Неисправан</mat-radio-button>
+                  </mat-radio-group>
+            </div>
+          </div>
+        <!--<div class="job">Способан За Лет: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPlane.enabled"></div>-->
+       
+      </div>
+   
+
+
+      
+
+    </div>
+    <h2 class="podnaslov" style="color:white;    font-weight: bold;"> Техничке Карактеристике и Систем Наоружања</h2>
+
+  <div class = "content2">
+      
+    <div class="buttons">
+        <button (click)="RegisterPlane()" >Региструј Авион</button>
+      </div>
+      
+      
+      <div class="naslov">
+        <div class="name" p>  Нови Авион<p></div>
+          <!--<p>Lorem dolor sit amet, consectetur adipisicing elit. Ab officiis, harum minus aliquam atque aliquid enim commodi accusantium ut maiores dolorum nulla?</p>-->
+
+        <!--<div class="buttons">
+          <button >Промени Податке</button>
+          <button >Будући Термини</button>
+        </div>-->
+
+      </div>
+
+      
+     
+
+      <div class="details">
+         <P>  </P>
+         <P>  </P>
+         <P>  </P>
+        <div class="job">Максимална брзина[km/h]:   <input  type="number" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPlane.maximum_speed"></div>
+        <div class="job">Максимална Висина[km]: <input  type="number" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPlane.maximum_high"></div>
+        <div class="job">Распон Крила[m]:  <input  type="number" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPlane.length_wings"> </div>
+        <div class="job">Тактички Радиус[km]: <input  type="number" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPlane.tactical_radius"></div>
+       
+      </div>
+      <div class = "details2">
+
+        <div class="job">Погон: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPlane.pogon"></div>
+        <div class="job">Ракетни Радиус[km]: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPlane.rocket_radius"></div>
+        <div class="job">Тип Ракете: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPlane.weaponSystem.rocket_type"></div>
+        <div class="job">Број Ракета: <input  type="number" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPlane.weaponSystem.number_of_rockets"></div>
+        <div class="job">Количина Горива[l]: <input  type="number" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newPlane.fuel_reserve"></div>
+
+
+      </div>
+
+    </div>
+
+      </div>
+ 
+
+
+
+ </body>
+</html>
