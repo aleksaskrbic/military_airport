@@ -1,0 +1,59 @@
+
+<section class="text-center" style="background-color:ghostwhite"> </section> 
+    <div class="text-center" style="background-color:ghostwhite"> </div>
+    <h1 class="text-center" style="color:white;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1cm; font-weight: bold;">
+        Листа свих доступних Авиона</h1>
+        <h2 class="text-center" style="color:whitesmoke; background-color: #092c3e; font-weight: bold;">Претражи све Доступне Авионе</h2>
+
+       
+        <label class="sort1">Сортирај по Типу</label>
+        <button class="sort_dugme1" (click)="SortPlanesByType()">Сортирај</button> 
+      
+
+      <div class="col-sm" >
+        <label class="sort2">Сортирај по Називу</label>
+        <button class="sort_dugme2" (click)="SortPlanesByMark()">Сортирај</button> 
+      </div>
+
+      <div class="col-sm" >
+        <label class="sort3">Сортирај по Систему Наоружања</label>
+        <button class="sort_dugme3" (click)="SortPlanesBySystem()">Сортирај</button> 
+      </div>
+
+<div class="card-body py-5 px-md-5">
+
+<div class="table">
+    <table    datatable class="table  " style="background-color:white;color:darkslategray; font-weight: bold; ">
+        <thead>
+            <tr>
+                <th scope="col" fontweight = "bold">Редни Број </th>
+                <th scope="col" fontweight = "bold">Регистарска Ознака</th>
+                <th scope="col" fontweight = "bold">Назив Авиона</th>
+                <th scope="col" fontweight = "bold">Тип Авиона</th>
+                <th scope="col" fontweight = "bold">Број Седишта</th>
+                <th scope="col" fontweight = "bold">Аеродром</th>
+                <th scope="col" fontweight = "bold">Погледај</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let airplane of airplanes">
+                <td><img alt="icon" src="./assets/img/air-force.png" class="id">{{airplane.id}}</td>
+                <td class="registrationMark">{{airplane.registrationMark}}</td>
+                <td class="airplane_name">{{airplane.airplane_name}}</td>
+                <td class="airplaneType">{{airplane.airplaneType}}</td>
+                <td class="seat_number">{{airplane.seat_number}}</td>
+                <td class="airport_name">{{airplane.airport.airport_name}}</td>
+                <td><button class="dugme"><img src = "./assets/img/air-force.png"   (click)="PilotProfile()"></button></td>
+
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>
+</div>
+   
+
+
+
+

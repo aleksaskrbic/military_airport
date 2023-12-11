@@ -1,0 +1,69 @@
+
+<body>
+<section class="text-center" style="background-color:ghostwhite"> </section> 
+    <div class="text-center" style="background-color:ghostwhite"> </div>
+    <h1 class="text-center" style="color:white;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1cm; font-weight: bold;">
+       Историја Извештаја</h1>
+        <h2 class="text-center" style="color:whitesmoke; background-color: #092c3e; font-weight: bold;">Погледај Све Доступне Извештаје</h2>
+
+       
+        <button class="bek_dugme" (click)="Back()">Назад</button>
+
+
+<div class="card-body py-5 px-md-5">
+
+<div class="table">
+    <table    datatable class="table  " style="background-color:white;color:darkslategray; font-weight: bold; ">
+        <thead>
+            <tr>
+                <th scope="col" fontweight = "bold">Редни Број </th>
+                <th scope="col" fontweight = "bold">Авион</th>
+                <th scope="col" fontweight = "bold">Пилот</th>
+                <th scope="col" fontweight = "bold">Термин</th>
+                <th scope="col" fontweight = "bold">Датум</th>
+                <th scope="col" fontweight = "bold">Пилот Прошао Тестове</th>
+                <th scope="col" fontweight = "bold">Механичар Одобрио Лет</th>
+                <th scope="col" fontweight = "bold">Тип Мисије</th>
+                <th scope="col" fontweight = "bold">Статус Мисије</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let controllSurvey of controllSurveys">
+                <td><img alt="icon" src="./assets/img/air-force.png" class="id">{{controllSurvey.id}}</td>
+                <td class="registrationMark">{{controllSurvey.flyTerm.airplane.airplane_name}}</td>
+                <td class="airplane_name">{{controllSurvey.flyTerm.pilot.cin + " " + controllSurvey.flyTerm.pilot.firstName + " " + controllSurvey.flyTerm.pilot.lastName}}</td>
+                <td class="airplaneType">{{controllSurvey.flyTerm.id}}</td>
+                <td class="airplane_name">{{controllSurvey.flyTerm.start}}</td>
+
+                <td> <div *ngIf="(controllSurvey.flyTerm.pilotSurvey.pilot_Approved == true)"><img alt="icon" src="./assets/img/approve.png" class="id"></div>
+                    <div *ngIf="(controllSurvey.flyTerm.pilotSurvey.pilot_Approved == false)"> <img alt="icon" src="./assets/img/waiting.png" class="id"></div> </td>
+               
+               <td> <div *ngIf="(controllSurvey.flyTerm.mechanicSurvey.mechanic_approved == true)"><img alt="icon" src="./assets/img/approve.png" class="id"></div>
+                 <div *ngIf="(controllSurvey.flyTerm.mechanicSurvey.mechanic_approved == false)"> <img alt="icon" src="./assets/img/waiting.png" class="id"></div> </td>
+
+
+                <td class="seat_number">{{controllSurvey.mission_type}}</td>
+                <!--<td class="seat_number">{{controllSurvey.mission_success}}</td>-->
+                <td class = "broj" fontweight = "bold"><div *ngIf="(controllSurvey.flyTerm.pilotSurvey.pilot_Approved == true) && (controllSurvey.flyTerm.mechanicSurvey.mechanic_approved == true)   " > <label><font style="color:green;"> УСПЕШНО  </font></label></div>
+                <div *ngIf="!(controllSurvey.flyTerm.pilotSurvey.pilot_Approved == true)"> <label><font style="color:red;"> НЕУСПЕШНО </font></label></div>
+                <div *ngIf="!(controllSurvey.flyTerm.mechanicSurvey.mechanic_approved == true)"> <label><font style="color:red;"> НЕУСПЕШНО </font></label></div>
+            </td>
+
+
+                <!--<td class="airport_name">{{airplane.airport.airport_name}}</td>-->
+                <!--<td><button class="dugme"><img src = "./assets/img/air-force.png"   (click)="PilotProfile()"></button></td>-->
+
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>
+</div>
+
+</body>
+   
+
+
+
+

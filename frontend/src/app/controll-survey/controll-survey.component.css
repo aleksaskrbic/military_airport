@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+body{
+  background-image:linear-gradient(#A93226,#C0392B, #CD6155 );
+  height: 205vh;
+     }
+   
+   *{
+     margin: auto;
+     padding: 50;
+     box-sizing: content-box;
+     font-family: 'Poppins',sans-serif;
+   }
+   .outer{
+     height: 185vh;
+     width: 176vh;
+     display: flex;
+     top: 800%;
+     background-image:linear-gradient(#092c3e, #2C3E50,#34495E,#5D6D7E );
+     position: relative;
+     left: -30px;
+   
+   }
+
+   .content{
+    display: flex;
+    width: 1070px;
+    height: 1300px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 15px;
+    position: relative;
+    left: 35px;
+    top: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  }
+
+
+
+  
+  
+    input[type=number] {
+      border: none;
+      border-bottom: 2px;
+      font-weight: bold;
+      width: 15%;
+    }
+
+    
+
+    .content .details{
+        width: 78%;
+        margin: 10px 0 20px 20px;
+        color: #092c3e;
+      }
+
+      #switch:checked ~ .outer .details{
+        transition: 0.1s;
+        color: #fff;
+      }
+
+      .content .details .job{
+        font-size: 18px;
+        font-weight: 500;
+        font-weight: bold;
+        
+      }
+
+      .content .details p{
+        font-size: 15px;
+        margin-top: 6px;
+       }
+
+       input[type=text] {
+        border: none;
+        border-bottom: 2px;
+        font-weight: bold;
+        width: 75%;
+      }
+
+      .content .podnaslov1
+      {
+          position: relative;
+          top: -150px;
+          left: 350px;
+          font-size: 28px;
+          font-weight: 500;
+          font-weight: bold;
+          color: #092c3e;
+          
+      }
+
+      .okvir2{
+      
+      
+        position: relative;
+        top: -200px; left: 120px;
+      
+      }
+      
+      .okvir2 .details{
+        width: 78%;
+        margin: 0px 0 40px -30px;
+        
+        color: #092c3e;
+        position: relative;
+        left: -40px;
+        top: -220px;
+      }
+      
+      .okvir2 .details2{
+      
+        width: 78%;
+        margin: -230px 0 40px 260px;
+        position: relative;
+        left: 400px;
+        top: -380px;
+        
+        color: #092c3e;
+      
+      }
+      
+      
+      .okvir2 .details .job{
+        font-size: 20px;
+        font-weight: 500;
+        font-weight: bold;
+        
+      }
+      
+      
+      .okvir2 .details2 .job{
+        font-size: 20px;
+        font-weight: 500;
+        font-weight: bold;
+        
+      }
+
+      .image-box2 {
+        height: 262px;
+        width:  270px;
+        border-radius: 12px;
+        padding: 3px;
+        position: relative;
+        top: -80px; left: 368px;
+      
+      }
+      .image-box2 img {
+        height: 150%;
+        width: 150%;
+        
+      }
+
+      .content .linije
+      {
+        position: relative;
+        top: 430px;
+        left: -400px;
+        width: 0px;
+      }
+
+      .content .podnaslov2
+      {
+          position: relative;
+          top: -50px;
+          left: 10px;
+          width: 5%;
+          font-size: 26px;
+          font-weight: 500;
+          font-weight: bold;
+          color: #092c3e;
+      }
+
+     /* .content .pitanja_pilot
+      {
+        position: relative;
+        left: -60px;
+        top: 50px;
+      }
+
+      .row1
+    {
+        position: relative;
+        top: 250px;
+        left: -550px;
+        font-size: 22px;
+        font-weight: 500;
+        font-weight: bold;
+        color: #092c3e;
+    }
+
+    .content .row2
+    {
+
+        position: relative;
+        top: 105px;
+        left: 0px;
+        font-size: 22px;
+        font-weight: 500;
+        font-weight: bold;
+        color: #092c3e;
+        border-radius: 33px #092c3e;
+    }
+    
+
+    .content .row3
+    {
+
+        position: relative;
+        top: 140px;
+        left: -550px;
+        font-size: 22px;
+        font-weight: 500;
+        font-weight: bold;
+        color: #092c3e;
+        border: 33px #092c3e;
+    }
+
+    .content .row4
+    {
+
+        position: relative;
+        top: -5px;
+        left: -5px;
+        font-size: 22px;
+        font-weight: 500;
+        font-weight: bold;
+        color: #092c3e;
+        border: 33px #092c3e;
+    }*/
+
+    .sacuvaj_dugme{
+      display: block;
+      margin-top: 16px;
+      outline: none;
+      border: none;
+      font-size: 17px;
+      padding: 6px 14px;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      background: #092c3e;
+      transition: all 0.3s ease;
+      position: relative;
+      top: 1183px;
+      left: -770px;
+                  }
+    
+    .sacuvaj_dugme:hover{
+      transform: scale(0.97);
+    }
+   
+   #switch:checked ~ .outer .sacuvaj_dugme{
+      color: #092c3e;
+    }
+
+    .apdejt_dugme{
+      display: block;
+      margin-top: 16px;
+      outline: none;
+      border: none;
+      font-size: 17px;
+      padding: 6px 14px;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      background: #092c3e;
+      transition: all 0.3s ease;
+      position: relative;
+      top: 1183px;
+      left: -750px;
+                  }
+    
+    .apdejt_dugme:hover{
+      transform: scale(0.97);
+    }
+   
+   #switch:checked ~ .outer .apdejt_dugme{
+      color: #092c3e;
+    }
+
+  
+
+     
+
+      .content .tip_raketa
+      {
+        position: relative;
+        top: 600px;
+        left: -420px;
+        font-size: 22px;
+        font-weight: 500;
+        font-weight: bold;
+        color: #092c3e;
+
+      }
+
+      .content .broj_raketa
+      {
+        position: relative;
+        top: 400px;
+        left: 150px;
+        font-size: 22px;
+        font-weight: 500;
+        font-weight: bold;
+        color: #092c3e;
+      }
+
+    
+
+      .content .kilometraza
+      {
+        position: relative;
+        top: 420px;
+        left: 150px;
+        font-size: 22px;
+        font-weight: 500;
+        font-weight: bold;
+        color: #092c3e;
+      }
+
+      .content .gorivo
+      {
+        position: relative;
+        top: 420px;
+        left: 150px;
+        font-size: 22px;
+        font-weight: 500;
+        font-weight: bold;
+        color: #092c3e;
+      }
+
+      .content .vrsta_misije
+      {
+        position: relative;
+        top: 20px;
+        left: -420px;
+        font-size: 22px;
+        font-weight: 500;
+        font-weight: bold;
+        color: #092c3e;
+      }
+
+      .content .status_misije
+      {
+        position: relative;
+        top: -135px;
+       left: 150px;
+        font-size: 22px;
+        font-weight: 500;
+        font-weight: bold;
+        color: #092c3e;
+      }
+
+      .content .napomena
+      {
+        position: relative;
+        top: 160px;
+        left: -400px;
+        font-size: 22px;
+        font-weight: 500;
+        font-weight: bold;
+        color: #092c3e;
+      }
+
+      .datumi {
+      
+        width: 78%;
+        margin: -230px 0 40px 260px;
+        position: relative;
+        left: 0px;
+        top:  330px;
+        
+        color: #092c3e;
+      
+      }
+      .datumi .job
+      {
+        font-size: 20px;
+        font-weight: 500;
+        font-weight: bold;
+      }
+
+      .content .status_misije1
+      {
+        position: relative;
+        top: 120px;
+        left: -380px;
+        font-size: 22px;
+        font-weight: 500;
+        font-weight: bold;
+        color: #092c3e;
+      }
+
+
+      .content .napomena1
+      {
+        position: relative;
+        top: 30px;
+        left: 200px;
+        font-size: 22px;
+        font-weight: 500;
+        font-weight: bold;
+        color: #092c3e;
+      }
+
+      .datumi1 {
+      
+        width: 78%;
+        margin: -230px 0 40px 260px;
+        position: relative;
+        left: 0px;
+        top:  330px;
+        
+        color: #092c3e;
+      
+      }
+      .datumi1 .job
+      {
+        font-size: 20px;
+        font-weight: 500;
+        font-weight: bold;
+      }
+
+    
+     
+   
+        
+      
+      
+
+      
+
+          
+      

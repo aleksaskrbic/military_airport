@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+body{
+ background-color:#A93226;
+  }
+
+
+
+*{
+  margin: auto;
+  padding: 150;
+  box-sizing: content-box;
+  font-family: 'Poppins',sans-serif;
+}
+.outer{
+  height: 93vh;
+  width: 186vh;
+  display: flex;
+  top: 700%;
+  align-items: center;
+  background-image:linear-gradient(#092c3e, #2C3E50,#5D6D7E );
+  position: relative;
+  left: -50px;
+
+
+}
+
+.okvir{
+
+  position: relative;
+  top: 180px; left: -540px;
+
+}
+
+.okvir2{
+
+
+  position: relative;
+  top: -180px; left: 100px;
+
+}
+
+.okvir2 .details{
+  width: 78%;
+  margin: 0px 0 40px -30px;
+  
+  color: white;
+}
+
+.okvir2 .details2{
+
+  width: 78%;
+  margin: -230px 0 40px 260px;
+  
+  color: white;
+
+}
+
+
+.okvir2 .details .job{
+  font-size: 18px;
+  font-weight: 500;
+  font-weight: bold;
+  
+}
+.okvir2 .details p{
+ font-size: 15px;
+ margin-top: 6px;
+}
+
+.okvir2 .details2 .job{
+  font-size: 18px;
+  font-weight: 500;
+  font-weight: bold;
+  
+}
+.okvir2 .details2 p{
+ font-size: 15px;
+ margin-top: 6px;
+}
+
+
+
+
+input[type=text] {
+  border: none;
+  border-bottom: 2px;
+  font-weight: bold;
+  width: 35%;
+}
+
+
+
+.outer .toggle{
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  border-radius: 40%;
+  background: #092c3e;
+  right: 25px;
+  top: 23px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.image-box {
+  height: 192px;
+  width:  150px;
+  border-radius: 12px;
+  padding: 3px;
+  background: #092c3e;
+  position: relative;
+  top: -210px; left: 118px;
+
+}
+.image-box img {
+  height: 20%;
+  width: 20%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  border-radius: 12px;
+}
+
+.image-box2 {
+  height: 192px;
+  width:  210px;
+  border-radius: 12px;
+  padding: 3px;
+  background: #092c3e;
+  position: relative;
+  top: -210px; left: 968px;
+
+}
+.image-box2 img {
+  height: 100%;
+  width: 100%;
+  border: 3px solid #fff;
+  border-radius: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #4a4a4d;
+  font: 14px/1.4 "Helvetica Neue", Helvetica, Ar\ial, sans-serif;
+}
+
+
+th,
+td {
+  padding: 10px 15px;
+  vertical-align: middle;
+  font-weight: bold;
+ 
+    border: none;
+    background: none;
+  
+  
+}
+thead {
+  background: #395870;
+  background: linear-gradient(#49708f, #293f50);
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+th:first-child {
+  border-top-left-radius: 5px;
+  text-align: left;
+}
+th:last-child {
+  border-top-right-radius: 5px;
+}
+tbody tr:nth-child(even) {
+  background: #f0f0f2;
+}
+td {
+  border-bottom: 1px solid #cecfd5;
+  border-right: 1px solid #cecfd5;
+}
+td:first-child {
+  border-left: 1px solid #cecfd5;
+}
+
+tfoot {
+  text-align: right;
+}
+tfoot tr:last-child {
+  background: #f0f0f2;
+  color: #395870;
+  font-weight: bold;
+  font-size: 15px;
+}
+tfoot tr:last-child td:first-child {
+  border-bottom-left-radius: 5px;
+}
+tfoot tr:last-child td:last-child {
+  border-bottom-right-radius: 5px;
+}
+
+.dugme_ikona{
+  width: 35px;
+  height: 30px;
+  border: none;
+  background: none;
+}
+
+.outer .prikaz_pilota{
+  margin-top: 16px;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  background: #092c3e;
+
+}
+
+

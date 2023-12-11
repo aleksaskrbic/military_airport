@@ -1,0 +1,228 @@
+.center {
+    display: block;
+    margin-left: left;
+    margin-right: auto;
+    margin-top: left;
+    width: 7%;
+  }
+  
+  .col-sm{
+    font-weight: bold;
+    text-emphasis-color: white;
+    color: white;
+    position: absolute;
+    nav-right: auto;
+    
+    
+    font-size: 17px;
+  }
+  
+  .dugme{
+    width: 35px;
+    height: 30px;
+    border: none;
+    background: none;
+    position: relative;
+    left: 50px;
+  }
+
+  .bek_dugme{
+    display: block;
+    margin-top: 16px;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    background: #092c3e;
+    transition: all 0.3s ease;
+    position: relative;
+    left: 50px;
+    top: 120px;
+  }
+  .bek_dugme:hover{
+    transform: scale(0.97);
+  }
+  #switch:checked ~ .bek_dugme{
+    background: #fff;
+    color: #092c3e;
+  }
+  
+body{
+   
+    background-image: url('flota.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+  }
+  
+  
+  table {
+      border-collapse: separate;
+      border-spacing: 0;
+      color: #4a4a4d;
+      font: 14px/1.4 "Helvetica Neue", Helvetica, Ar\ial, sans-serif;
+      position: relative;
+      top: 100px;
+    }
+  
+    
+    th,
+    td {
+      padding: 10px 15px;
+      vertical-align: middle;
+      font-weight: bold;
+     
+        border: none;
+        background: none;
+      
+      
+    }
+    thead {
+      background: #395870;
+      /*background: linear-gradient(#49708f, #293f50);*/
+      background: #092c3e;
+      color: #fff;
+      font-size: 15px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    th:first-child {
+      border-top-left-radius: 5px;
+      text-align: left;
+    }
+    th:last-child {
+      border-top-right-radius: 5px;
+    }
+    tbody tr:nth-child(even) {
+      background: #f0f0f2;
+    }
+    td {
+      border-bottom: 1px solid #cecfd5;
+      border-right: 1px solid #cecfd5;
+    }
+    td:first-child {
+      border-left: 1px solid #cecfd5;
+    }
+   
+    tfoot {
+      text-align: right;
+    }
+    tfoot tr:last-child {
+      background: #f0f0f2;
+      color: #395870;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    tfoot tr:last-child td:first-child {
+      border-bottom-left-radius: 5px;
+    }
+    tfoot tr:last-child td:last-child {
+      border-bottom-right-radius: 5px;
+    }
+  
+
+    .sort1{
+      font-weight: bold;
+      font-size: 20px;
+      color: #fff;
+      position: relative;
+      top: 120px;
+      left: 110px;
+    }
+    .sort2{
+      font-weight: bold;
+      font-size: 20px;
+      color: #fff;
+      position: relative;
+      top: 40px;
+      left: 490px;
+    }
+    .sort3{
+      font-weight: bold;
+      font-size: 20px;
+      color: #fff;
+      position: relative;
+      top: -45px;
+      left: 880px;
+    }
+    
+    .sort_dugme1{
+      display: block;
+      margin-top: 16px;
+      outline: none;
+      border: none;
+      font-size: 17px;
+      padding: 6px 14px;
+      border-radius: 6px;
+      color: #fff;
+      cursor: pointer;
+      background: #092c3e;
+      transition: all 0.3s ease;
+      position: relative;
+      top: 75px;
+      left: 320px;
+    
+    }
+    
+    .sort_dugme2{
+      display: block;
+      margin-top: 16px;
+      outline: none;
+      border: none;
+      font-size: 17px;
+      padding: 6px 14px;
+      border-radius: 6px;
+      color: #fff;
+      cursor: pointer;
+      background: #092c3e;
+      transition: all 0.3s ease;
+      position: relative;
+      top: -10px;
+      left: 705px;
+    
+    }
+    
+    .sort_dugme3{
+      display: block;
+      margin-top: 16px;
+      outline: none;
+      border: none;
+      font-size: 17px;
+      padding: 6px 14px;
+      border-radius: 6px;
+      color: #fff;
+      cursor: pointer;
+      background: #092c3e;
+      transition: all 0.3s ease;
+      position: relative;
+      top: -92px;
+      left: 1180px;
+    
+    }
+    
+    .sort_dugme1:hover{
+      transform: scale(0.97);
+    }
+    .sort_dugme2:hover{
+      transform: scale(0.97);
+    }
+    .sort_dugme3:hover{
+      transform: scale(0.97);
+    }
+    #switch:checked ~  .sort_dugme1{
+      background: #fff;
+      color: #092c3e;
+    }
+    #switch:checked ~ .sort_dugme2{
+      background: #fff;
+      color: #092c3e;
+    }
+    #switch:checked ~  .sort_dugme3{
+      background: #fff;
+      color: #092c3e;
+    }
+    

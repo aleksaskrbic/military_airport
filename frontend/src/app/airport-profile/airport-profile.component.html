@@ -1,0 +1,100 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>FORMA ZA REGISTRACIJU</title>
+    <meta name = "viewport" content="width=device-width,
+    inital-scale=1.0"/>
+</head>
+
+
+<body>
+
+    <h1 class="text-center" style="color:white;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1cm; font-weight: bold;">
+        Профил Аеродрома</h1>
+
+    <div class="container">
+       <div class="outer">
+
+        <div >
+          <img class = "image-box" alt="grb"  src="./assets/img/srpski_grb.png" height=30% > 
+     </div> 
+
+     <div >
+      <img class = "image-box2" alt="grb"  src="./assets/img/srpski_tocak.png" height=30% > 
+ </div>
+     
+
+     
+
+   
+        
+        <div class = "okvir2">
+
+          <div class="details">
+            <div class="job">Ознака Аеродрома:   <input type = "text" class="form-control" [(ngModel)]="airport.airport_mark"> </div>
+            <div class="job">Назив Аеродрома:  <input  type="text" class="form-control"    [(ngModel)]="airport.airport_name"> </div>
+            <div class="job">Држава: <input  type="text" class="form-control"    [(ngModel)]="airport.state.state_name"></div>
+          </div>
+      
+          <div class = "details2">
+      <div class="job">Град: <input  type="text" class="form-control"    [(ngModel)]="airport.city"></div>
+      <div class="job">Број Авиона: <input  type="text"  class="form-control"    [(ngModel)]="airport.number_of_planes"></div>
+      <div class="job">Број Запослених: <input  type="text"  class="form-control"   [(ngModel)]="airport.number_of_stuff"></div>
+    </div>
+
+
+        </div>
+       
+       
+        <div class = "okvir">
+        <h2 class="text-center" style="color:white;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  font-weight: bold;">
+          Листа Пилота</h2>
+        <div class="table">
+          <table    datatable class="table  " style="background-color:white;color:darkslategray; font-weight: bold; ">
+              <thead>
+                  <tr>
+                      <th scope="col" fontweight = "bold">Редни Број </th>
+                       <th scope="col" fontweight = "bold">Име </th>
+                      <th scope="col" fontweight = "bold">Презиме </th>
+                      <th scope="col" fontweight = "bold">Мејл Адреса</th>
+                      <th scope="col" fontweight = "bold">Чин </th>
+                      <th scope="col" fontweight = "bold">Поени </th>
+                      <th scope="col" fontweight = "bold">Погледај</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let pilot of pilots">
+                      <td>{{pilot.id}}</td>
+                      <td>{{pilot.firstName}}</td>
+                      <td>{{pilot.lastName}}</td>
+                      <td>{{pilot.email}}</td>
+                      <td>{{pilot.cin}}</td>
+                      <td>{{pilot.points}}</td>
+                      <td><button class="dugme_ikona"><img src = "./assets/img/pilot.png" (click) = "pilotProfile(pilot.id)"   ></button></td>
+      
+              </tr>
+              </tbody>
+          </table>
+
+          <button id="btnstuff"  class = "prikaz_pilota" style="text-align: center" (click) = "showPilots()">Прикажи Пилоте</button>
+
+      
+      
+      </div>
+         
+        
+     </div>
+    </div>
+  </div>
+
+    
+ 
+         
+        
+
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+body{
+    background-image: url('pista.jpg');
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+}
+
+
+.content{
+    display: flex;
+    width: 700px;
+    height: 350px;
+    padding: 35px;
+    background: #fff;
+    border-radius: 15px;
+    position: relative;
+    left: 380px;
+    top: 100px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  
+  ::placeholder {
+    color: lightslategrey;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration-color: #092c3e;
+    size: 0cap;
+    width: 35vh;
+  }
+
+  input[type=text] {
+    border: none;
+    border-bottom: 2px;
+    font-weight: bold;
+    width: 70%;
+  }
+
+  input[type=password] {
+    border: none;
+    border-bottom: 2px;
+    font-weight: bold;
+    width: 70%;
+  }
+
+  .image-box {
+    height: 317px;
+    width: 400px;
+    border-radius: 12px;
+    padding: 3px;
+    background: #092c3e;
+    position: relative;
+    top: -20px;
+  }
+  .image-box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 12px;
+  }
+
+
+
+  .content .naslov
+  {
+      width: 60%;
+      color: #092c3e;
+      position: relative;
+      left: -240px;
+  }
+  .content .naslov .name{
+    font-size: 28px;
+    font-weight: 600;
+    position: relative;
+    top: -45px;
+  }
+
+  .content .details{
+    width: 78%;
+    margin: 10px 0 20px 20px;
+    color: #092c3e;
+    position: relative;
+    top: -20px;
+    left: -20px;
+  }
+  #switch:checked ~ .outer .details{
+    transition: 0.1s;
+    color: #fff;
+  }
+  .content .details .name{
+    font-size: 28px;
+    font-weight: 600;
+    
+  }
+  .content .details .job{
+    font-size: 20px;
+    font-weight: 500;
+    font-weight: bold;
+    
+  }
+  .content .details p{
+   font-size: 15px;
+   margin-top: 6px;
+  }
+
+  .content button{
+    display: block;
+    margin-top: 16px;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    background: #092c3e;
+    transition: all 0.3s ease;
+    position: relative;
+    top: 180px;
+    left: 130px;
+  }
+  .content button:hover{
+    transform: scale(0.97);
+  }
+  #switch:checked ~ .outer button{
+    background: #fff;
+    color: #092c3e;
+  }
+
+  .content .dugme
+  {
+    display: block;
+    margin-top: 16px;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    background: #092c3e;
+    transition: all 0.3s ease;
+    position: relative;
+    top: 180px;
+    left: 180px;
+    height: 50px;
+  }
+
+  .content .dugme :hover{
+    transform: scale(0.97);
+  }
+  #switch:checked ~ .outer .dugme{
+    background: #fff;
+    color: #092c3e;
+  }

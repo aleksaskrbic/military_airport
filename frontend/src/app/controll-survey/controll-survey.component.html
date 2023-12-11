@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>FORMA ZA REGISTRACIJU</title>
+    <meta name = "viewport" content="width=device-width,
+    inital-scale=1.0"/>
+</head>
+
+
+
+   <body>
+
+    <h1 class="text-center" style="color:white;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1cm; font-weight: bold;">
+        Креирање Извештаја За Лет</h1>
+
+        <div class="container">
+       <div class="outer">
+         <div class="content">
+          <form >  
+                <label for="firstName" class="podnaslov1">Подаци о Пилоту и Авиону</label>
+                <div >
+                    <img class = "image-box2" alt="grb"  src="./assets/img/srpski_tocak.png" height=70% > 
+                  </div>
+                <div class="okvir2">
+                    <div class="details">
+                        <div class="job">ИД Пилота:  {{flyTerm.pilot.id}} </div>
+                        <p>-----------------</p>
+                        <div class="job">Име:  {{flyTerm.pilot.firstName}} </div>
+                        <p>-----------------</p>
+                        <div class="job">Презиме:  {{flyTerm.pilot.lastName}}</div>
+                        <p>-----------------</p>
+                        <div class="job">Чин: {{flyTerm.pilot.cin}}</div>
+                        <p>-----------------</p>
+                        <!--<div class="job">Бодови:   {{flyTerm.start}}</div>
+                       <p>-------------------</p>-->
+                       <td><div *ngIf="(flyTerm.pilotSurvey.pilot_Approved == true)"><div class = "job"> Пилоту Одобрен Лет: </div>  <img alt="icon" src="./assets/img/approve.png"  class="job"></div>
+                        <div *ngIf="(flyTerm.pilotSurvey.pilot_Approved == false
+                        )"><div class = "job"> Пилоту Одобрен Лет: </div>  <img alt="icon" src="./assets/img/approve.png"  class="job">    </div> </td> 
+                      </div>
+                  
+                    <div class = "details2">
+                      <div class="job">ИД Авиона:   {{flyTerm.airplane.id}}</div>
+                      <p>-------------------</p>
+                      <div class="job">Регистарска Ознака: {{flyTerm.airplane.registrationMark}}</div>
+                      <p>-------------------</p>
+                      <div class="job">Тип Авиона: {{flyTerm.airplane.airplaneType}}</div>
+                      <p>-------------------</p>
+                      
+                      
+                      <div class="job">Број Ракета:  {{flyTerm.airplane.weaponSystem.number_of_rockets}}</div>
+                      <p>-------------------</p>
+                    <td><div *ngIf="(flyTerm.mechanicSurvey.mechanic_approved == true)"><div class = "job"> Механичар Одобрио Лет: </div>  <img alt="icon" src="./assets/img/approve.png"  class="job"></div>
+                      <div *ngIf="(flyTerm.mechanicSurvey.mechanic_approved == false)"><div class = "job"> Механичар Одобрио Лет: </div>  <img alt="icon" src="./assets/img/waiting.png"  class="job"></div> </td> 
+                    </div>
+                    
+                   </div>
+                 
+              </form>
+              <!--<p class="linije"> ____________________________________________________________________________________________</p>-->
+
+              <label for="firstName" class="podnaslov2">Попуњава КонтролорЛета</label>
+  
+   
+
+
+
+   
+<div *ngIf="(flyTerm.pilotSurvey.pilot_Approved == true) && (flyTerm.mechanicSurvey.mechanic_approved == true)" class="pitanja_kontrolor">
+
+   <div class="tip_raketa">
+        <div class="col-sm">
+            <p> Тип Утрошених Ракета</p>
+        </div>
+        <div class="col-sm">
+            <mat-radio-group aria-label="Select an option" style="margin-right: 450px;" [(ngModel)]="pickControllSurvey.rocket_type">
+                <mat-radio-button value="Ваздух-Ваздух">Ваздух-Ваздух</mat-radio-button>
+                <mat-radio-button value="Ваздух-Земља">Ваздух-Земља</mat-radio-button>
+              </mat-radio-group>
+        </div>
+      </div>
+
+      <div class = "broj_raketa">
+       <div class="col-sm">
+            <p> Број Утрошених Ракета</p>
+        </div>
+       <div class="broj">
+          <input  type="number" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="pickControllSurvey.number_of_rockets">
+      </div>
+     </div>
+
+     <div class = "kilometraza">
+        <div class="col-sm">
+             <p> Пређених Километара[km]</p>
+         </div>
+        <div class="col-sm">
+           <input  type="number" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="pickControllSurvey.road_length">
+       </div>
+      </div>
+
+      <div class = "gorivo">
+        <div class="col-sm">
+             <p> Утрошено Гориво[l]</p>
+         </div>
+        <div class="col-sm">
+           <input  type="number" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="pickControllSurvey.fuel_used">
+       </div>
+      </div>
+
+      <div class="vrsta_misije">
+        <div class="col-sm">
+            <p> Врста Мисије</p>
+        </div>
+        <div class="col-sm">
+            <mat-radio-group aria-label="Select an option" style="margin-right: 450px;" [(ngModel)]="pickControllSurvey.mission_type">
+                <mat-radio-button value="Вежба">Вежба</mat-radio-button>
+                <mat-radio-button value="Извиђачка">Извиђачкa</mat-radio-button>
+                <mat-radio-button value="Спасилачка">Спасилачка</mat-radio-button>
+                <mat-radio-button value="Против Ваздухопловна Одбрана">Против Ваздухопловна Одбрана</mat-radio-button>
+                <mat-radio-button value="Ваздушни Транспорт">Ваздушни Транспорт</mat-radio-button>
+              </mat-radio-group>
+        </div>
+      </div>
+
+      <div class="status_misije">
+        <div class="col-sm">
+            <p> Статус Мисије</p>
+        </div>
+        <div class="col-sm">
+            <mat-radio-group aria-label="Select an option" style="margin-right: 450px;" [(ngModel)]="pickControllSurvey.mission_success">
+                <mat-radio-button value="Успешнa">Успешнo</mat-radio-button>
+                <mat-radio-button value="Неуспешнa">Неуспешнo</mat-radio-button>
+                <mat-radio-button value="Прекинута">Обустављенo</mat-radio-button>
+                <mat-radio-button value="Непозната">Непознатo</mat-radio-button>
+              </mat-radio-group>
+        </div>
+      </div>
+
+      <div class = "napomena">
+        <div class="col-sm">
+             <p> Додатна Напомена</p>
+         </div>
+        <div class="col-sm">
+           <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="pickControllSurvey.extra_note">
+       </div>
+      </div>
+
+      <div class = "datumi">
+        
+        <div class="job">Датум и Време: {{flyTerm.end}}</div>
+        <p>-------------------</p>
+        <div class="job">Контролор: {{flyController.firstName + " " + flyController.lastName}} </div>
+        <p>-------------------</p>
+  
+      </div>
+
+      <!--<div >
+        <img class = "pecat" alt="grb"  src="./assets/img/pecat2.png" > 
+      </div>-->
+
+
+
+</div>
+
+
+<div *ngIf="(flyTerm.pilotSurvey.pilot_Approved == false) || (flyTerm.mechanicSurvey.mechanic_approved == false)" class="pitanja_kontrolor1">
+
+
+     <div class="status_misije1">
+       <div class="col-sm">
+           <p> Статус Мисије</p>
+       </div>
+
+       <label><font style="color:red;"> ОБУСТАВЉЕНО </font></label>
+       
+     </div>
+
+     <div class = "napomena1">
+       <div class="col-sm">
+            <p> Додатна Напомена</p>
+        </div>
+       <div class="col-sm">
+          <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="pickControllSurvey.extra_note">
+      </div>
+     </div>
+
+     <div class = "datumi1">
+       
+       <div class="job">Датум и Време: {{flyTerm.end}}</div>
+       <p>-------------------</p>
+       <div class="job">Контролор: {{flyController.firstName + " " + flyController.lastName}} </div>
+       <p>-------------------</p>
+ 
+     </div>
+
+     <!--<div >
+       <img class = "pecat" alt="grb"  src="./assets/img/pecat2.png" > 
+     </div>-->
+
+
+
+</div>
+   
+
+
+  <button class="sacuvaj_dugme" (click)="Save()">Сачувај Извештај</button>
+  <button class="apdejt_dugme" (click)="Apdejt(pickControllSurvey)">Потврди Промене</button>
+
+
+
+
+</div>
+     
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,270 @@
+body{
+    background-image: url('pista.jpg');
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+}
+
+
+.content{
+    display: flex;
+    width: 650px;
+    height: 550px;
+    padding: 35px;
+    background: #fff;
+    border-radius: 15px;
+    position: relative;
+    left: 300px;
+    top: -20px;
+    bottom: -1000px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  ::placeholder {
+    color: lightslategrey;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration-color: #092c3e;
+    size: 0cap;
+    width: 35vh;
+  }
+
+  input[type=text] {
+    border: none;
+    border-bottom: 2px;
+    font-weight: bold;
+    width: 50%;
+  }
+
+  input[type=number] {
+    border: none;
+    border-bottom: 2px;
+    font-weight: bold;
+    width: 50%;
+  }
+
+
+
+  .image-box {
+    height: 432px;
+    width: 350px;
+    border-radius: 12px;
+    padding: 3px;
+    background: #092c3e;
+    position: relative;
+    top: 60px;
+  }
+  
+  .image-box img
+  {
+    height: 99.8%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 12px;
+  }
+
+  /*.image-box img {
+    height: 100%;
+    width: 150%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 12px;
+  }*/
+
+  .content .naslov
+  {
+      width: 60%;
+      color: #092c3e;
+      position: relative;
+      left: -120px;
+      top: 20px;
+  }
+  .content .naslov .name{
+    font-size: 28px;
+    font-weight: 600;
+    position: relative;
+    top: -45px;
+  }
+
+
+
+  .content .details{
+    width: 78%;
+    margin: 10px 0 20px 20px;
+    color: #092c3e;
+    position: relative;
+    top: -30px;
+    left: -40px;
+  }
+  #switch:checked ~ .outer .details{
+    transition: 0.1s;
+    color: #fff;
+  }
+  .content .details .name{
+    font-size: 28px;
+    font-weight: 600;
+    
+  }
+  .content .details .job{
+    font-size: 20px;
+    font-weight: 500;
+    font-weight: bold;
+    
+  }
+  .content .details p{
+   font-size: 15px;
+   margin-top: 6px;
+  }
+
+  .content .details2{
+    width: 78%;
+    margin: 10px 0 20px 20px;
+    color: #092c3e;
+  }
+  #switch:checked ~ .outer .details2{
+    transition: 0.1s;
+    color: #fff;
+  }
+   
+  .content .details2 .name{
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .content .details2 .job{
+    font-size: 23px;
+    font-weight: 500;
+    font-weight: bold;
+    
+  }
+  .content .details2 p{
+   font-size: 15px;
+   margin-top: 6px;
+  }
+
+
+  .content2 button{
+    display: block;
+    margin-top: 16px;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    background: #092c3e;
+    transition: all 0.3s ease;
+    position: relative;
+    top: 370px;
+    left: 250px;
+  }
+  .content2 button:hover{
+    transform: scale(0.97);
+  }
+  #switch:checked ~ .outer button{
+    background: #fff;
+    color: #092c3e;
+  }
+
+  .content .bek_dugme{
+    display: block;
+    margin-top: 16px;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    background: #092c3e;
+    transition: all 0.3s ease;
+    position: relative;
+    left: -127px;
+    top: -120px;
+  }
+  .bek_dugme:hover{
+    transform: scale(0.97);
+  }
+  #switch:checked ~ .bek_dugme{
+    background: #fff;
+    color: #092c3e;
+  }
+
+  .podnaslov
+  {
+    position: relative;
+    left: 400px;
+
+  }
+
+  /*ДРУГИ КОНТЕНТ */
+  .content2{
+    display: flex;
+    width: 650px;
+    padding: 35px;
+    background: #fff;
+    border-radius: 15px;
+    position: relative;
+    left: 300px;
+    top: 0px;
+    bottom: -1000px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  }
+
+
+
+  .content2 .details{
+    width: 78%;
+    margin: 10px 0 20px 20px;
+    color: #092c3e;
+    position: relative;
+    top: -30px;
+    left: -100px;
+  }
+  #switch:checked ~ .outer .details{
+    transition: 0.1s;
+    color: #fff;
+  }
+  .content2 .details .name{
+    font-size: 28px;
+    font-weight: 600;
+    
+  }
+  .content2 .details .job{
+    font-size: 20px;
+    font-weight: 500;
+    font-weight: bold;
+    
+  }
+  .content2 .details p{
+   font-size: 15px;
+   margin-top: 6px;
+  }
+
+  .content2 .details2{
+    width: 78%;
+    margin: 10px 0 20px 20px;
+    color: #092c3e;
+    position: relative;
+    left: -20px;
+    top: -15px;
+  }
+  #switch:checked ~ .outer .details2{
+    transition: 0.1s;
+    color: #fff;
+  }
+   
+  .content2 .details2 .name{
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .content2 .details2 .job{
+    font-size: 20px;
+    font-weight: 500;
+    font-weight: bold;
+    
+  }
+  .content2 .details2 p{
+   font-size: 15px;
+   margin-top: 6px;
+  }

@@ -1,0 +1,30 @@
+.spacer{
+    flex: 1 1 auto;
+}
+
+
+
+
+.log_dugme{
+    display: block;
+    margin-top: 16px;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    background: #092c3e;
+    transition: all 0.3s ease;
+    position: relative;
+    top: -10px;
+  }
+  .log_dugme:hover{
+    transform: scale(0.97);
+  }
+  #switch:checked ~ .outer .log_dugme{
+    background: #fff;
+    color: #092c3e;
+  }
+  
