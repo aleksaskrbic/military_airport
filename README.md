@@ -19,7 +19,7 @@
   
 </ul>
 
-<hr>
+
 
 
 <h2>Need to install:</h2>
@@ -46,3 +46,5 @@ npm config set legacy-peer-deps true</code>
      <code>ng serve</code>
   </li>
 </ul>
+
+<hr>
