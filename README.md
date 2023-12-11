@@ -2,9 +2,13 @@
 
 
 <br>
-<h2> Дипломски испит -- Bachelor Thesis </h2>
-   <h2> Алекса Шкрбић IN 29/2018  </h2> 
-
+<h2> Дипломски испит -- Bachelor Thesis 
+   <ul>
+   <li> Алекса Шкрбић IN 29/2018  </li>
+   <li> Информациони Инжењеринг (Information Engeneering)  </li> 
+      
+   </ul>
+   </h2> 
 
 <h2>Technologies:</h2>
 <ul>
