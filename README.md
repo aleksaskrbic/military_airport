@@ -47,8 +47,13 @@ npm config set legacy-peer-deps true</code>
   </li>
 </ul>
 
-<h2>Pilot Example: username: milenko@gmail.com, password: 123<h2>
-<h2>Mechanic Example: username: zika@gmail.com, password: 123<h2>
-<h2>Mechanic Fly Controller: username: aleksa@gmail.com, password: 123<h2>
+<h2>Корисници (Users):</h2>
+<ul>
+  <li> Pilot Example: username: milenko@gmail.com, password: 123 </li>
+  <li> Mechanic : username: zika@gmail.com, password: 123 </li>
+  <li>  Fly Controller: username: aleksa@gmail.com, password: 123 </li>
+</ul>
+
+
 
 <hr>
