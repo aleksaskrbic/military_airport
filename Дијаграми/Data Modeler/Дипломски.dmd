@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Дипломски" id="D2996BCF-3C89-53CA-92FF-CF183C8229DC" version="3.5">
+<createdBy>Aleksa</createdBy>
+<createdTime>2023-11-20 16:48:06 UTC</createdTime>
+<ownerDesignName>Дипломски</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>D2996BCF-3C89-53CA-92FF-CF183C8229DC</designId>
+</OSDM_Design>
