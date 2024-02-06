@@ -165,7 +165,21 @@ input[type=datetime-local] {
     left: -30px;
     top: 70px;
             }
-          
+
+.content .details .combo{
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    border: none;
+    border-bottom: 2px;
+    font-weight: bold;
+    color:#092c3e;
+    width: 75%;
+    left: 30px;
+    top: 0px;
+                      }
+
+
 .content .details p{
     font-size: 15px;
     margin-top: 6px;

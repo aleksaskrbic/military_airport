@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { FlyTerms } from '../model/flyterms';
 import { TermsServiceService } from '../service/terms-service.service';
 import { Router } from '@angular/router';
@@ -13,6 +13,7 @@ import { Mechanic } from '../model/mechanic';
 import { FlyControler } from '../model/flycontroler';
 import { PilotServiceService } from '../service/pilot-service.service';
 import { AirplaneService } from '../service/airplane.service';
+import { data } from 'jquery';
 
 @Component({
   selector: 'app-add-fly-term',
@@ -21,6 +22,7 @@ import { AirplaneService } from '../service/airplane.service';
 })
 export class AddFlyTermComponent implements OnInit {
 
+
   newFlyTerm: FlyTerms;
   flyControler: FlyControler;
   controller_id: number;
@@ -28,6 +30,25 @@ export class AddFlyTermComponent implements OnInit {
   placeholder = 'Унесите информације...';
   airplanes: Airplane[];
   lData: any[];
+  SelectedValue: any;
+  AirplaneList: any;
+  Railways: RailWay[];
+  
+  ChangeAirplane(e)
+  {
+    console.log('e', e.target.value)
+    this.SelectedValue = e.target.value;
+  }
+
+  ChangeRailWay(e)
+  {
+    console.log('e', e.target.value)
+    this.SelectedValue = e.target.value;
+  }
+  
+
+ 
+
   pickState: State = new State
   ({
      id: 0,
@@ -143,9 +164,20 @@ export class AddFlyTermComponent implements OnInit {
           railWay: this.pickRailway
      })
 
+
+
+
+    
+     
+      
+     
   constructor(private termsService: TermsServiceService, private airplaneService: AirplaneService, 
     private router: Router, private pilotService: PilotServiceService) 
   { 
+
+
+
+
      this.flyControler = new FlyControler
      ({
           id: 0,
@@ -169,8 +201,12 @@ export class AddFlyTermComponent implements OnInit {
   ngOnInit(): void 
   {
      this.findControllerById();
-     this.viewAllPlanes();
+     //this.viewAllPlanes();
+     this.airplaneService.getAllAirplanes().subscribe((data:any) =>{
+      this.AirplaneList = data;
+     })
      this.lData = this.airplanes;
+
 
   }
 
@@ -205,5 +241,8 @@ export class AddFlyTermComponent implements OnInit {
   {
     location.pathname = ('stuff_profile')
   }
+
+
+ 
 
 }

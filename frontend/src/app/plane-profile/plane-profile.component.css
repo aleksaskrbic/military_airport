@@ -208,7 +208,7 @@ body{
     color: #092c3e;
     position: relative;
     top: -30px;
-    left: -100px;
+    left: -80px;
   }
   #switch:checked ~ .outer .details{
     transition: 0.1s;

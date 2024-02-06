@@ -107,6 +107,7 @@ export class PilotProfileComponent implements OnInit {
     this.pilotService.UpdatePilot(this.pilot)
     .subscribe(res => this.pilot = res)
     alert("Успешно сачуване измене на профилу!");
+    
     window.location.reload();
     this.loadPilot();
   }
