@@ -74,15 +74,28 @@
 
              <div class="job">Трајање[минутa]: <input  type="number" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="newFastTerm.duration"></div>
              <p></p>
-             <div class="job">Избор Авиона[ИД Број]: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="pickAirplane.id">
-              <!--<igx-combo #combo class="combo" [itemsMaxHeight]="5"
-              [data]="airplanes" [displayKey]="'airplane.id'" [valueKey]="'airplane.id'"
-              placeholder="Location(s)"  searchPlaceholder="Search..." >  
-          </igx-combo>-->
-            </div>
              <p></p>
+             <p></p>
+
+
+
+             <div class="job"> Избор Авиона: 
+
+
+              <select  type = "text"   name="AirplaneList" (change)="ChangeAirplane($event)" input  type="text"    class="combo" [(ngModel)]="pickAirplane.id" >
+                
+                <option [value] = "pickAirplane.id" *ngFor="let pickAirplane of AirplaneList">
+                  {{pickAirplane.airplane_name }}      
+              </option>
+             </select>
+            <!--Selected Value: {{SelectedValue}}-->
+           </div>
+          
+
+             <p></p>
+             
              <div class="job">Избор Писте[ИД Број]: <input  type="text" class="form-control"  [placeholder]="placeholder"  [(ngModel)]="pickRailway.id"></div>
-           
+
              
      
              
